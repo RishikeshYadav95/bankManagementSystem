@@ -110,7 +110,8 @@ public class Transactions extends JFrame implements ActionListener
 			new Withdraw(ssn, pin);
 		}
 		else if (ae.getSource() == fastCash) {
-			
+			setVisible(false);
+			new FastCash(ssn, pin);			
 		}
 		else if (ae.getSource() == miniStatement) {
 			
