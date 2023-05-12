@@ -45,13 +45,13 @@ public class Transactions extends JFrame implements ActionListener
 		add(label);
 		
 		JLabel nameJL = new JLabel("Welcome " + name);
-		nameJL.setBounds(215, 270, 700, 35);
+		nameJL.setBounds(215, 300, 700, 35);
 		nameJL.setFont(new Font("System", Font.BOLD, 18));
 		nameJL.setForeground(Color.GREEN);
 		label.add(nameJL);
 		
 		JLabel text = new JLabel("Please select your transaction");
-		text.setBounds(205, 290, 700, 35);
+		text.setBounds(205, 330, 700, 35);
 		text.setFont(new Font("System", Font.BOLD, 18));
 		text.setForeground(Color.GREEN);
 		label.add(text);
@@ -117,7 +117,8 @@ public class Transactions extends JFrame implements ActionListener
 			
 		}
 		else if (ae.getSource() == pinChange) {
-			
+			setVisible(false);
+			new PinChange(ssn, pin);	
 		}
 		else if (ae.getSource() == balance) {
 			
