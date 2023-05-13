@@ -190,6 +190,14 @@ public class SignupThree extends JFrame implements ActionListener
 	{		
 		if (ae.getSource() == cancel)
 		{
+			try{
+				Conn conn = new Conn();
+				conn.s.executeUpdate("DELETE * FROM Customer WHERE ssn = '"+ssn+"'");
+			}
+			catch(Exception e) {
+				System.out.println(e);	
+			}
+			
 			setVisible(false);
 			new Login();
 		}
@@ -263,7 +271,7 @@ public class SignupThree extends JFrame implements ActionListener
 				c.s.executeUpdate(query);
 				query = "INSERT INTO Login(ssn, cardNumber, pin) VALUES ('" + ssn + "', '" + cardNumber + "', '" + pin + "')";
 				c.s.executeUpdate(query);
-				query = "INSERT INTO Account(ssn, balance) VALUES ('" + ssn + "', '0')";
+				query = "INSERT INTO Accounts(ssn, balance) VALUES ('" + ssn + "', '0')";
 				c.s.executeUpdate(query);
 				c.s.close();
 				
