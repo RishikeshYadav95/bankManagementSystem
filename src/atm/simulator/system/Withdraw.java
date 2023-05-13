@@ -27,7 +27,7 @@ public class Withdraw  extends JFrame implements ActionListener{
 	
 	public Withdraw(String ssn, String pin) {
 		
-setLayout(null);
+		setLayout(null);
 		
 		this.ssn = ssn;
 		this.pin = pin;

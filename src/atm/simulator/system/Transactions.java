@@ -45,7 +45,7 @@ public class Transactions extends JFrame implements ActionListener
 		add(label);
 		
 		JLabel nameJL = new JLabel("Welcome " + name);
-		nameJL.setBounds(215, 300, 700, 35);
+		nameJL.setBounds(225, 300, 700, 35);
 		nameJL.setFont(new Font("System", Font.BOLD, 18));
 		nameJL.setForeground(Color.GREEN);
 		label.add(nameJL);
@@ -114,14 +114,16 @@ public class Transactions extends JFrame implements ActionListener
 			new FastCash(ssn, pin);			
 		}
 		else if (ae.getSource() == miniStatement) {
-			
+			setVisible(false);
+			new MiniStatement(ssn, pin);
 		}
 		else if (ae.getSource() == pinChange) {
 			setVisible(false);
 			new PinChange(ssn, pin);	
 		}
 		else if (ae.getSource() == balance) {
-			
+			setVisible(false);
+			new CheckBalance(ssn, pin);
 		}
 		else if (ae.getSource() == exit) {
 			System.exit(0);			

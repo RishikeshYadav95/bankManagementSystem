@@ -70,7 +70,7 @@ public class PinChange extends JFrame implements ActionListener
 		constraint1.setForeground(Color.YELLOW);
 		label.add(constraint1);
 		
-		constraint2 = new JLabel("- PIN can either have 4 or 6 digits");
+		constraint2 = new JLabel("- PIN can only have 4 digits");
 		constraint2.setFont(new Font("System", Font.BOLD, 12));
 		constraint2.setBounds(185, 415, 220, 25);
 		constraint2.setForeground(Color.YELLOW);
@@ -88,7 +88,7 @@ public class PinChange extends JFrame implements ActionListener
 		
 		setSize(900, 900);
 		setLocation(300, 0);
-		//setUndecorated(true);
+		setUndecorated(true);
 		setVisible(true);
 		
 	}
@@ -98,7 +98,7 @@ public class PinChange extends JFrame implements ActionListener
 	{
 		if (ae.getSource() == back) {
 			setVisible(false);
-			new Transactions(ssn, pin);
+			new Transactions(ssn, pin).setVisible(true);;
 		}
 		else if(ae.getSource() == confirm) 
 		{
@@ -165,7 +165,7 @@ public class PinChange extends JFrame implements ActionListener
 					
 				}
 				catch (SQLException e) {
-					e.printStackTrace();
+					System.out.println(e);
 					pane = new JOptionPane("Unable to change pin at the moment. Please try again later!");
 				}
 				finally {
@@ -198,20 +198,18 @@ public class PinChange extends JFrame implements ActionListener
 	
 	private boolean pinChecker(String pin) {
 		
-		if(pin == null || pin.equals("") || (pin.length() != 4 && pin.length() != 6)) {
+		if(pin == null || pin.equals("") || pin.length() != 4) {
 			return true;
 		}
 		try
 		{
 	        int d = Integer.parseInt(pin);
-	        if(d <= 999 || d >= 1000000)
+	        if(d <= 999 || d >= 10000)
 	        {
 	        	return true;
 	        }
-	        else if(d >= 10000 && d <= 99999) {
-	        	return true;
-	        }
-	    } catch (NumberFormatException nfe) {
+	    } 
+		catch (NumberFormatException nfe) {
 	        return true;
 	    }
 		return false;
