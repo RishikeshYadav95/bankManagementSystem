@@ -8,33 +8,34 @@ The "ATM Simulator" project is a model for Bank System Management. It enables th
 
 The inspiration for this ATM Simulator project stems from the basic need of having an e-financial application in todays fast paced online world, for customers in banking environment. This project is meant to nurture the needs of an end banking user by providing them various ways to perform all banking tasks at the disposal of a few button clicks. Also, to easily enable functionalities which are otherwise not provided under a conventional banking project. This project has been developed to make banking processes easy and quick, which is a shortcoming of the traditional system.
 
-<!-- How to run re$ale -->
-## How to install and run re$ale
+<!-- How to run ATM Simulator -->
+## How to install and run ATM Simulator
 
-Follow the steps to run re$ale.
+Follow the steps to run ATM Simulator.
 
-1. Fork the Project / Download the source code as a zip file
-2. Navigate to the project directory
-3. Install the dependencies (`npm install`)
-4. Seed the database (`npm run seed`)
-5. Start the server (`npm start`)
-6. Navigate to `localhost: 3000`
+0. Install Java and MySQL on your server.[Prerequisite]
 
-<!-- How to use re$ale -->
-## How to use re$ale
+1. Fork the Project / Download the source code as a zip file.
+2. Extract the code on your server.
+2. Open MySQL Workbench and run the ATM_Simulator.sql file from sql folder.
+3. Navigate to and open the "\src\atm\simulator\system\Conn.java" class and update details for your MySQL server, username and password.
+4. Now run the "\src\atm\simulator\system\Login.java".
 
-Follow these steps to use resale.
+<!-- How to use ATM Simulator -->
+## How to use ATM Simulator
 
-1. Access re$ale homepage (`localhost: 3000`)
-2. Sort products and filter them based on your needs
-3. Click sign up, fill up the form to create an account
-4. View products (and recommended products), comment, favourite them, email/chat with, or rate product sellers
-5. Navigate to user profile to view liked products, or update profile
-6. Click on sell products, put in details, upload pictures and click submit
-7. View your product, view product bids, update your product, accept a bid
-8. Read about re$ale on about page, add a testimonial
-9. View re$ale statistics on Statistics Page
-10. Toggle dark mode in User Profile page
+Follow these steps to use ATM Simulator.
+
+1. When accessing first time, click sign up, fill up the form to create an account.
+2. Now Login with your cardnumber and pin to access the ATM Simulator GUI.
+3. You have the option of depositing money, withdrawing money or withdrawing using fast cash option.
+4. You also have the option of changing your PIN and checking your account balance.
+5. You can also request a mini statement for your account.
+6. The mini statement shows your name, your masked card number, you account balance and your last 10 transactions.
+
+<!-- Screenshots of ATM Simulator -->
+### Screenshots of ATM Simulator
+
 
 <!-- CONTRIBUTING -->
 ## Contributing

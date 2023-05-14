@@ -24,13 +24,13 @@ public class Login extends JFrame implements ActionListener{
 		Image img2 = img1.getImage().getScaledInstance(180, 180, Image.SCALE_DEFAULT);
 		img1 =  new ImageIcon(img2);
 		JLabel label = new JLabel(img1);
-		label.setBounds(150, 90, 180, 180);
+		label.setBounds(140, 90, 180, 180);
 		add(label);
 		
 		//Adding text fields to the Frame
-		JLabel text = new JLabel("Welcome to ATM");
-		text.setFont(new Font("Osward", Font.BOLD, 50));
-		text.setBounds(350, 170, 500, 40);
+		JLabel text = new JLabel("Welcome to E-Bank ATM");
+		text.setFont(new Font("Osward", Font.BOLD, 42));
+		text.setBounds(340, 170, 500, 40);
 		add(text);
 		
 		JLabel cardNo = new JLabel("Card No.");
