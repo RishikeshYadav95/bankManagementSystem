@@ -37,7 +37,7 @@ Follow these steps to use ATM Simulator.
 ### Screenshots of ATM Simulator
 <img 
      src="/screenshots/1.jpg"
-     style="display: inline-block; margin: 0 auto; width:500px; height:600px;">
+     style="display: inline-block; margin: 0 auto; width:600px; height:400px;">
 
 <!-- CONTRIBUTING -->
 ## Contributing
