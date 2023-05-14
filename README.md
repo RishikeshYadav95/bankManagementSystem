@@ -13,7 +13,7 @@ The inspiration for this ATM Simulator project stems from the basic need of havi
 
 Follow the steps to run ATM Simulator.
 
-0. Install Java and MySQL on your server.[Prerequisite]
+*Prerequisite: Install Java and MySQL on your server.
 
 1. Fork the Project / Download the source code as a zip file.
 2. Extract the code on your server.
