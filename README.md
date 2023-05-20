@@ -20,6 +20,7 @@ Follow the steps to run ATM Simulator.
 2. Open MySQL Workbench and run the ATM_Simulator.sql file from sql folder.
 3. Navigate to and open the "\src\atm\simulator\system\Conn.java" class and update details for your MySQL server, username and password.
 4. Now run the "\src\atm\simulator\system\Login.java".
+5. You could also create a MySQL user with credentials as username:"root" & password:"root", run the ATM_Simulator.sql file from sql folder and then directly run the /executable/ATM_Simulator.jar file.
 
 <!-- How to use ATM Simulator -->
 ## How to use ATM Simulator
